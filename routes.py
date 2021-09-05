@@ -16,8 +16,8 @@ def homepage():
     form = RegisterForm()
     if request.method == "POST":
         flash(
-            "Weather Window is no longer accepting new users due to security changes from Google which "
-            "make it difficult for us to maintain the service :( "
+            "As of September 2021 Weather Window is no longer accepting new users due to security changes from Google"
+            "which make it difficult for us to maintain the service :( "
         )
         print(form.errors)
         try:
