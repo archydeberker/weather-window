@@ -38,8 +38,8 @@ def homepage():
                 flash(f" We couldn't find a location for {form.postcode.data}, please check and try again!")
         except:
             flash(
-                "As of September 2021 Weather Window is no longer accepting new users due to security changes from Google"
-                "which make it difficult for us to maintain the service :( "
+                "As of September 2021 Weather Window is no longer accepting new users. This is due to security changes from Google"
+                " which make it difficult for us to maintain the service 😭. Thank you for your interest 🙏 "
             )
 
     return render_template("register.html", title="Weather Window", form=form, GOOGLE_API_KEY=constants.GOOGLE_API_KEY)
