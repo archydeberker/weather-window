@@ -15,10 +15,7 @@ api = Blueprint("api", __name__)
 def homepage():
     form = RegisterForm()
     if request.method == "POST":
-        flash(
-            "As of September 2021 Weather Window is no longer accepting new users due to security changes from Google"
-            "which make it difficult for us to maintain the service :( "
-        )
+
         print(form.errors)
         try:
             _, duplicate_user = actions.register_new_user(form.email.data, form.postcode.data)
@@ -39,6 +36,11 @@ def homepage():
                 flash(f"Did you forget to enter a location?")
             else:
                 flash(f" We couldn't find a location for {form.postcode.data}, please check and try again!")
+        except:
+            flash(
+                "As of September 2021 Weather Window is no longer accepting new users due to security changes from Google"
+                "which make it difficult for us to maintain the service :( "
+            )
 
     return render_template("register.html", title="Weather Window", form=form, GOOGLE_API_KEY=constants.GOOGLE_API_KEY)
 
