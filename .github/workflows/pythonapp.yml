@@ -19,6 +19,8 @@ jobs:
 
     - name: Set Python path
       run: echo "::set-env name=PYTHONPATH::."
+      env:
+        - ACTIONS_ALLOW_UNSECURE_COMMANDS: True
   
     - name: Get Credentials from S3
       id: credentials
