@@ -102,7 +102,7 @@ def preferences_page():
                 actions.send_update_preferences_email(email)
                 flash(f"We've sent a link to edit your preferences to {email}")
             except:
-                flash("We're not able to update preferences due to Google blocking our outgoing emails :(")
+                flash("We're not able to update preferences due to Google blocking our outgoing emails 😭")
 
         except ValueError:
             flash(f"We couldn't find that user, have you already unsubscribed?")
