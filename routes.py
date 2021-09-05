@@ -38,8 +38,8 @@ def homepage():
                 flash(f" We couldn't find a location for {form.postcode.data}, please check and try again!")
         except:
             flash(
-                "As of September 2021 Weather Window is no longer accepting new users due to security changes from Google"
-                "which make it difficult for us to maintain the service :( "
+                "As of September 2021 Weather Window is no longer accepting new users. This is due to security changes from Google"
+                " which make it difficult for us to maintain the service 😭. Thank you for your interest 🙏 "
             )
 
     return render_template("register.html", title="Weather Window", form=form, GOOGLE_API_KEY=constants.GOOGLE_API_KEY)
@@ -88,6 +88,11 @@ def unsubscribe_page():
             flash(f"Unsubscribe email sent to {email}")
         except ValueError:
             flash(f"We couldn't find that user, have you already unsubscribed?")
+        except:
+            flash(
+                "We're not able to automatically unsubscribe due to Google blocking our outgoing emails 😞. Please"
+                " email archy.deberker@gmail.com if you'd like us to delete your data"
+            )
 
     return render_template("unsubscribe.html", form=form)
 
@@ -102,7 +107,7 @@ def preferences_page():
                 actions.send_update_preferences_email(email)
                 flash(f"We've sent a link to edit your preferences to {email}")
             except:
-                flash("We're not able to update preferences due to Google blocking our outgoing emails :(")
+                flash("We're not able to update preferences due to Google blocking our outgoing emails 😭")
 
         except ValueError:
             flash(f"We couldn't find that user, have you already unsubscribed?")
