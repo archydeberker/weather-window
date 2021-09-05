@@ -15,6 +15,8 @@ api = Blueprint("api", __name__)
 def homepage():
     form = RegisterForm()
     if request.method == 'POST':
+        flash("Weather Window is no longer accepting new users due to security changes from Google which "
+              "make it difficult for us to maintain the service :( ")
         print(form.errors)
         try:
             _, duplicate_user = actions.register_new_user(form.email.data, form.postcode.data)
