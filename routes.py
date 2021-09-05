@@ -88,6 +88,11 @@ def unsubscribe_page():
             flash(f"Unsubscribe email sent to {email}")
         except ValueError:
             flash(f"We couldn't find that user, have you already unsubscribed?")
+        except:
+            flash(
+                "We're not able to automatically unsubscribe due to Google blocking our outgoing emails 😞. Please"
+                " email archy.deberker@gmail.com if you'd like us to delete your data"
+            )
 
     return render_template("unsubscribe.html", form=form)
 
