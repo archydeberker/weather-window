@@ -85,7 +85,7 @@ packaging==19.2
 pandas==0.25.3
 pathspec==0.6.0
 pluggy==0.13.1
-protobuf==3.11.3
+protobuf==3.15.0
 py==1.8.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
