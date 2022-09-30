@@ -26,7 +26,7 @@ packaging==19.2
 pandas==0.25.3
 pathspec==0.6.0
 pluggy==0.13.1
-py==1.8.0
+py==1.10.0
 pycparser==2.14
 pycryptodome
 pyparsing==2.4.5
@@ -86,7 +86,7 @@ pandas==0.25.3
 pathspec==0.6.0
 pluggy==0.13.1
 protobuf==3.18.3
-py==1.8.0
+py==1.10.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pycparser==2.14
