@@ -43,7 +43,7 @@ toml==0.10.0
 typed-ast==1.4.0
 urllib3==1.25.7
 wcwidth==0.1.7
-Werkzeug==0.16.0
+Werkzeug==2.2.3
 alembic==0.8.7
 aniso8601==8.0.0
 appdirs==1.4.3
@@ -107,7 +107,7 @@ typed-ast==1.4.0
 uritemplate==3.0.1
 urllib3==1.25.7
 wcwidth==0.1.7
-Werkzeug==0.16.0
+Werkzeug==2.2.3
 WTForms==2.2.1
 zipp==3.1.0
 psycopg2
